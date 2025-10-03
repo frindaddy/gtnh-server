@@ -1,7 +1,7 @@
 FROM node:20-alpine AS ui-build
 WORKDIR /root/minecraft
 
-RUN apk upgrade && apk add openjdk17-jdk
+RUN apk upgrade && apk add openjdk25-jdk
 
 EXPOSE 25565
 ENTRYPOINT [ "java" ]
