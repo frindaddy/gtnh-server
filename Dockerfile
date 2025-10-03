@@ -1,7 +1,8 @@
 FROM node:20-alpine AS ui-build
 WORKDIR /root/minecraft
 
-RUN apk upgrade && apk add openjdk25-jdk
+RUN apk upgrade
+RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing openjdk25-jre
 
 EXPOSE 25565
 ENTRYPOINT [ "java" ]
